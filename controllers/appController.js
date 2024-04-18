@@ -32,6 +32,10 @@ const parseTransaction = (trx) => {
   }
 };
 
+exports.ping = (req, res) => {
+  res.json({ data: "pong" });
+};
+
 exports.user = async (req, res) => {
   const data = req.body;
   const userdomain = data.userdomain;
